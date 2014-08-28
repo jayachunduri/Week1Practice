@@ -21,8 +21,9 @@ namespace Week1Practice
             Boolean myBool = false;
 
             // 4. Declare a new list of strings called "productsList" and set it equal to "basketball", "baseball glove", "tennis shoes", "hockey puck"
-            //list<string> productList = new list<string> () { "basketball", "baseball glove", "tennis shoes", "hockey puck" };
+            List<string> productList = new List<string>() { "basketball", "baseball glove", "tennis shoes", "hockey puck" };
 
+            
 
             // PRINTING VARIABLES TO THE CONSOLE USING CONSOLE.WRITELINE()
             // 1. Print your name to the console using the format: "My name is <myName> and I'm a beast of a programmer"
@@ -34,7 +35,12 @@ namespace Week1Practice
             // 3. Print out your boolean value using the format: "I set my boolean value equal to <myBool>"
             Console.WriteLine("I set my boolean value equal to " + myBool);
 
+            Console.WriteLine("\n Below is the Product list");
             // 4. Using a For loop, print out each value in productsList.
+            foreach (var item in productList)
+            {
+                Console.WriteLine(item);                
+            }
 
             // FOR LOOP PRACTICE
             // 1. Create a for loop that prints out the numbers 1 to 10.
@@ -123,8 +129,16 @@ namespace Week1Practice
             // PUTTING IT TOGETHER
             // Use either FOR or WHILE loops to accomplish the following:
             // 1. Print out the number of letters in your name using the format: "My name, <myName>, has <number of letters> in it."
+            Console.WriteLine("\n My name, " + myName + " has " + myName.Length + "letters in it.");
+
             // 2. Print out the number of items in your list using the format: "My product list has <number of items> in it."
+            Console.WriteLine("\n My product list has " + productList.Count + " items in it.");
+
             // 3. Print out the number of letters of each item in productsList using the format: "<product> has <number of letters> in it."
+            foreach (var item in productList)
+            {
+                Console.WriteLine(item + " has " +item.Length + " letters in it.");
+            }
 
             // DECLARING AND CALLING FUNCTIONS
             // 1. Create a function called "Greeting" that takes one string parameter called "name".  This function will print "Hello <name>"
